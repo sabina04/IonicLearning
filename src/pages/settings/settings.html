@@ -1,0 +1,154 @@
+<ion-header>
+
+  <ion-navbar>
+   
+    
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  
+  
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+
+ <div class="card-background">
+        <img src="assets/img/ppic.png"    />
+        <div class="user">梅田校 Osaka Umeda</div> 
+           
+        </div>
+ <div class="divCustom"> 
+ <div class="stats">
+ 
+      <ion-grid class="grid">
+    <ion-row class="row">
+      <ion-col class="col" >
+        <strong>0</strong><br>
+       フィードバックポイント　 
+      </ion-col>
+      <ion-col  class="col"  >
+         <strong>0</strong><br>
+        プロモーションポイント 　
+      </ion-col>
+        <ion-col  class="col"  >
+           <strong>0</strong><br>
+        プロモーションレッスン　
+      </ion-col>
+    </ion-row>
+  
+  </ion-grid>
+ 
+ </div>
+ <div class="chart">
+  <div class="charthead">
+  <ion-grid class="grid">
+    <ion-row class="row">
+      <ion-col class="col"  >
+        <div class="title_txt">レッスン受講状況 <br>
+          <span>現在の受講頻度：3回 / 月</span>
+        </div>
+         
+      </ion-col>
+       <ion-col class="col" >
+        <div class="btn_blue">
+        <ion-list>
+  <ion-item>
+ 
+    <ion-select [(ngModel)]="gaming">
+      <ion-option value="nes" >NES</ion-option>
+      <ion-option value="n64" selected="true">TOEICコース</ion-option>
+      <ion-option value="ps">PlayStation</ion-option>
+      <ion-option value="genesis">Sega Genesis</ion-option>
+      <ion-option value="saturn">Sega Saturn</ion-option>
+      <ion-option value="snes">SNES</ion-option>
+    </ion-select>
+  </ion-item>
+ </ion-list>
+ </div>
+ 
+     <div class="title_txt">   目標達成のためには月4回の受講をおすすめします。</div>
+      </ion-col>
+    </ion-row>
+ 
+  </ion-grid>
+</div>
+<div class="chartbody">
+  <ion-grid class="grid">
+    <ion-row class="row">
+      <ion-col class="col" col-8 col-xl-6 col-lg-6 col-md-6  >
+   <div style="width:100%;">
+  <color-band-gauge  [options]="gaugeOptions"></color-band-gauge>
+</div>
+</ion-col>
+ <ion-col class="col"  col-4 col-xl-6 col-lg-6 col-md-6>
+ 
+<ul class="legend">
+  <li><span class="one"></span>やや遅れ気味です</li>
+   <li><span class="two"></span>かなり遅れています</li>
+    <li><span class="three"></span>まずまずのペースです（推奨）</li>
+     <li><span class="four"></span>よいペースです</li>
+      <li><span class="five"></span>非常によいペースです</li>
+    </ul>
+
+  </ion-col>
+</ion-row>
+</ion-grid>
+</div>
+</div>
+
+ <div class="navtab">
+    <ion-grid class="grid">
+    <ion-row class="row">
+      <ion-col class="col"  col-4 col-xl-2 col-lg-2 col-md-2 >
+       <a  (click)="NextLesson()" class="title_box">
+        <img src="assets/img/icon1.png"    />
+        <span class="title_icon">次回レッスン</span>
+       </a>
+      </ion-col>
+      <ion-col  class="col"  col-4 col-xl-2 col-lg-2 col-md-2 >
+        <a  href="#" class="title_box">
+        <img src="assets/img/icon2.png"    />
+        <span class="title_icon">最新のレッスンノート</span>
+ </a>
+       　
+      </ion-col>
+       <ion-col  class="col"  col-4 col-xl-2 col-lg-2 col-md-2 >
+       <a  href="#" class="title_box">
+        <img src="assets/img/icon3.png"    />
+        <span class="title_icon">レッスンノート</span>
+ </a>
+       　
+      </ion-col>
+   
+       <ion-col  class="col"  col-4 col-xl-2 col-lg-2 col-md-2 >
+        <a  href="#" class="title_box">
+        <img src="assets/img/icon4.png"    />
+        <span class="title_icon">レッスンスケジュール</span>
+ </a>
+       　
+      </ion-col>
+       <ion-col  class="col" col-4 col-xl-2 col-lg-2 col-md-2>
+         <a  href="#" class="title_box">
+        <img src="assets/img/icon5.png"    />
+        <span class="title_icon">eラーニング</span>
+ </a>
+       　
+      </ion-col>
+       <ion-col  class="col"  col-4 col-xl-2 col-lg-2 col-md-2 >
+           <a  href="#" class="title_box">
+         <img src="assets/img/icon6.png"    />
+         <span class="title_icon">ロゼッタ石</span>
+          </a>
+       　
+      </ion-col>
+    </ion-row>
+  
+  </ion-grid>
+ 
+ </div>
+ 
+ </div>
+</ion-content>

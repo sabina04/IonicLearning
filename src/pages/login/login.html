@@ -1,0 +1,75 @@
+
+
+<ion-content *ngIf="!forgotUserId" >
+  <div class="divCustom2"> 
+   <div class="centerlogo">
+    <img src="assets/img/logo2.png"    />
+   </div>
+
+   <div class="centertext">
+    <img src="assets/img/mypage.png"  width="60%"  />
+   </div>
+  <form (submit)="doLogin(formdata.value)" [formGroup]="formdata">
+    <ion-list>
+
+      <!-- <ion-item>
+        <ion-label floating>{{ 'EMAIL' | translate }}</ion-label>
+        <ion-input type="email" [(ngModel)]="account.email" name="email"></ion-input>
+      </ion-item> -->
+
+      <!--
+      Want to use a Username instead of an Email? Here you go:
+      -->
+      <ion-item>
+        <ion-label floating>{{ 'USERNAME' | translate }}</ion-label>
+        <ion-input type="text" formControlName="username" class="form-control" name="username"></ion-input>
+        <ion-label *ngIf="!formdata.controls.username.valid" class="error">Your username is required.</ion-label>
+      </ion-item>
+      
+
+      <ion-item>
+        <ion-label floating>{{ 'PASSWORD' | translate }}</ion-label>
+        <ion-input type="password" formControlName="password" class="form-control" name="password"></ion-input>
+        <ion-label *ngIf="!formdata.controls.password.valid" class="error">Your password is required.</ion-label>
+        
+      </ion-item>
+
+      <ion-grid class="grid">
+    <ion-row class="row">
+      <ion-col class="col" col-4="">
+        <div><input type="checkbox">保存する</div>
+      </ion-col>
+      <ion-col  class="col" col-8="" >
+        <div><a href=""> パスワードを忘れた方はこちら</a></div>
+        <div><a href="#/login" (click)="forgotUsername()">Forgot Username/Password</a></div>
+      </ion-col>
+    </ion-row>
+  
+  </ion-grid>
+
+      <div padding>
+        <button ion-button [disabled]="!formdata.valid" color="login" block>{{ 'LOGIN_BUTTON' | translate }}</button>
+        <!-- <button ion-button color="login" block>{{ 'LOGIN_BUTTON' | translate }}</button> -->
+      </div>
+
+    </ion-list>
+  </form>
+    <div class="footer">※提携校舎では、オンラインでの予約・キャンセルはできません。各校舎にてご予約ください。</div>
+  </div>
+</ion-content>
+
+<ion-content *ngIf="forgotUserId">
+    <form (submit)="updateUsername(forgotUserData.value)" [formGroup]="forgotUserData">
+        <ion-list>
+          <ion-item>
+            <ion-label floating>{{ 'Email' | translate }}</ion-label>
+            <ion-input type="text" formControlName="email" class="form-control" name="email"></ion-input>
+            <ion-label *ngIf="!forgotUserData.controls.email.valid" class="error">Your email is required.</ion-label>
+          </ion-item>
+          <div padding>
+              <button ion-button [disabled]="!forgotUserData.valid" color="Send" block>{{ 'Send' | translate }}</button>
+              <!-- <button ion-button color="login" block>{{ 'LOGIN_BUTTON' | translate }}</button> -->
+            </div>
+          </ion-list>
+    </form>    
+</ion-content>

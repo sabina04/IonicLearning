@@ -1,0 +1,44 @@
+page-welcome {
+
+
+.content, .content-md{
+     background: linear-gradient(#edf4f8 20%, #8998a4);
+
+}
+.intro_txt{
+     background: linear-gradient(#e6edf2 20%, #ffffff);
+     padding:30px 16px 8px 16px;
+     border-radius:12px;
+     margin:5px;
+     font-size: 1rem;
+     color:#333333;
+
+}
+.slogan {text-align: center;
+margin:  20px 2px 10px 2px;
+  font-size: .99rem;
+font-weight: bold;
+line-height:14px}
+.centerlogo { width:100%; text-align:center}
+.centerlogo img{ width:60%; }
+.footer{ position: absolute;bottom: 10px;
+font-size: .8rem;text-align: center;padding: 5px 20px}
+.link_txt { font-size: 1rem;text-align: center;width: 100%;margin: auto;
+margin-top: auto;display: block;text-decoration: underline;margin-top: 10px;}
+.intro_txt td p {padding:0 10px; color:#333333;margin:2px}
+
+  button.login {
+   
+    background-color:#2659a0;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+    color: #333;
+  width: 84%;
+margin: auto;
+    margin-top: auto;
+margin-top: 19px;
+
+    &.activated {
+      background-color: rgb(220, 220, 220);
+    }
+  }
+}

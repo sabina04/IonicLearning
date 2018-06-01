@@ -1,0 +1,68 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+.toolbar-background-md, .toolbar-background {  background:#0d0d0d}
+.button-inner, .bar-buttons, .toolbar-title{ color:#ffffff;}
+.show-menu .list .item-md {  background: linear-gradient(#0f0f0f, #090808);
+}
+.show-menu .item-inner{  color:#ffffff;}
+.alert-button-group{
+   background: linear-gradient(#0d0d0d  80%, #4a4a4a);
+}
+.menu-background {
+    height:100px;
+   
+      background: linear-gradient( #4a4a4a 20%,#0d0d0d);
+      text-align:center;
+      color:#fff;
+      padding-top:20px;
+}
+.menu-background img{display:inline-block; width:60px; height:60px; border-radius:100%; margin:2px 5px 2px 5px;float: left;}
+.menu-background  .user{display: inline-block;
+height: 60px;
+float: left;
+line-height: 60px; }
+.menu-inner .content, .menu-inner .content-md{
+     background-color:#0d0d0d;
+
+}
+.menu-inner .list-md,.menu-inner .list  {
+    margin: -1px 0 2px;
+    font-size:1.2rem;
+}
+.menu-inner .label-md ,.menu-inner label, .menu-inner .label-ios  {
+    margin: 1px 5px 1px 5px;
+    font-size: 1.4rem;
+}
+.sub{background:#1c1b1b; padding:2px; border-radius:20px; margin:2px 10px;}
+.show-menu .list ,.show-menu .list .item-md,,.show-menu .list .item-ios{background:transparent; border:none;  }
+
+.menu-inner  .item-block{  min-height:3.4rem}
+.menu-inner .logout{ border-radius: 50px;    padding: 10px 14px;    font-size: 1.8rem;background: #dec640; margin-left:10px; }
+.menu-inner .navfooter{
+background: #dec640;       position: fixed;      background-color:#0d0d0d;
+bottom:0;
+left:0;
+padding:10px 5px;
+    }
+ .rightBtn{ position: absolute;right: -51px;}
+  .rightBtn button{background:transparent;font-size: 1.4rem;height: 32px;
+border: 0;font-size: 2.4rem;padding:0px; }
+.divCustom{ max-width:800px; margin:auto}
+.divCustom2{ max-width:480px; margin:auto}
+
+
